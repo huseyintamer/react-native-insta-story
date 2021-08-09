@@ -9,7 +9,8 @@ import {
     TouchableWithoutFeedback,
     ActivityIndicator,
     View,
-    Platform
+    Platform,
+    Linking
 } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import {initialWindowSafeAreaInsets} from "react-native-safe-area-context";
@@ -99,7 +100,7 @@ export const StoryListItem = (props: Props) => {
             props.onClosePress();
         }
         if (content[current].onPress) {
-            content[current].onPress();
+            Linking.openURL(content[current].onPress)
         }
     }
 

@@ -1,5 +1,5 @@
 import React, {Fragment, useRef, useState} from "react";
-import {LogBox, Dimensions, View} from "react-native";
+import {LogBox, Dimensions, View, StatusBar} from "react-native";
 import Modal from "react-native-modalbox";
 import CubeNavigationHorizontal from "./CubeNavigationHorizontal";
 import StoryListItem from "./StoryListItem";
@@ -84,6 +84,7 @@ export const Story = (props: Props) => {
 
     return (
         <Fragment>
+          <StatusBar hidden={true} />
             <View style={style}>
                 <StoryCircleListView
                     handleStoryItemPress={_handleStoryItemPress}
