@@ -81,7 +81,7 @@ export default class CubeNavigationHorizontal extends React.Component {
                         this._animatedValue.setOffset({x: -(this.fullWidth + width)});
                     }
                 }
-                Animated.event([null, {dx: this._animatedValue.x}])(e, gestureState);
+                Animated.event([null, {dx: this._animatedValue.x}],{useNativeDriver: false})(e, gestureState);
             },
             onPanResponderRelease: (e, gestureState) => {
                 onDoneSwiping(gestureState);
